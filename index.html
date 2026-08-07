@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Interaktif JavaScript - X RPL</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cv-container">
-        <!-- Header Profil -->
-        <header class="cv-header">
-            <h1>Jesica maulia editia</h1>
-            <p>Junior Web Developer | Siswa TIP X</p>
+    <div class="main-container">
+        <!-- Header Fitur Kontrol -->
+        <header class="web-header">
+            <h1>Dasbor Interaktif Siswa</h1>
+            <button id="btn-togle" class="toggle-theme">Mode Gelap</button>
         </header>
 
-        <!-- Kartu Informasi Diri (Card Info) -->
-        <section class="cv-card">
-            <h2>Tentang Saya</h2>
-            <p>Halo saya adalah seorang pengembang web yang menyukai tantangan baru 
-               dan selalu bersemangat mempelajari teknologi terbaru..</p>
+        <!-- Kartu Fitur 1: Kalkulator Skor Kelulusan -->
+        <section class="widget-card">
+            <h2>Kalkulator Nilai Pemrograman</h2>
+            <p>Masukkan nilai ujian Anda di bawah ini untuk memeriksa status kelulusan otomatis.</p>
+            <div class="input-group">
+                <label for="input-nama">Nama Lengkap:</label>
+                <input type="text" id="input-nama" placeholder="Contoh: Jesica maulia editia">
+            </div>
+            <div class="input-group">
+                <label for="input-nilai">Nilai Ujian (0 - 100):</label>
+                <input type="number" id="input-nilai" placeholder="Contoh: 80">
+            </div>
+            <button id="btn-proses" class="action-btn">Proses Data Nilai</button>
+
+            <!-- Area Output DOM -->
+            <div id="box-hasil" class="result-box">
+                Status kelulusan Anda akan dimunculkan di sini secara dinamis.
+            </div>
         </section>
 
-        <!-- Kartu Riwayat Pendidikan -->
-        <section class="cv-card">
-            <h2>Riwayat Pendidikan</h2>
-            <p><strong>SMK Strada Jakarta</strong> - Rekayasa Perangkat Lunak (2025 - Sekarang)</p>
-        </section>
-
-        <!-- Bagian Keahlian dengan Flexbox -->
-        <section class="cv-card">
-            <h2>Keahlian Utama</h2>
-            <div class="skills-container">
-                <div class="skill-item">HTML5</div>
-                <div class="skill-item">CSS3 Layouting</div>
-                <div class="skill-item">Responsive Design</div>
-                <div class="skill-item">Git & GitHub</div>
+        <!-- Kartu Fitur 2: Simulasi Perulangan Logika -->
+        <section class="widget-card">
+            <h2>Pembangkit Teks Berulang (Looping Generator)</h2>
+            <button id="btn-loop" class="action-btn variant-btn">Jalankan Perulangan Logika</button>
+            <div id="box-loop" class="result-box">
+                Hasil cetak deret angka perulangan akan tampil di sini.
             </div>
         </section>
     </div>
-
+    <script src="../jobsheet 4/script.js"></script>
 </body>
 </html>
